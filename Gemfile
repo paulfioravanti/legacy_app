@@ -1,6 +1,6 @@
 source :rubygems
 
-gem 'rails', '2.3.15'
+gem 'rails', '2.3.17'
 gem "mysql", '~> 2.7.0'
 gem "rake", '0.9.2'
 
