@@ -1,5 +1,6 @@
 Given /^there is an image$/ do
-  @image = Image.make
+  # @image = Image.make
+  @image = Image.make!
 end
 
 When /^I choose an image to upload$/ do
