@@ -22,5 +22,5 @@ config.action_controller.allow_forgery_protection    = false
 config.action_mailer.delivery_method = :test
 
 require 'machinist/active_record'
-require 'sham'
+# require 'sham'
 require 'faker'

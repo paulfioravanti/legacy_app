@@ -6,7 +6,7 @@ require 'spec/autorun'
 require 'spec/rails'
 
 require 'machinist/active_record'
-require 'sham'
+# require 'sham'
 require 'faker'
 
 require 'features/support/blueprints'
