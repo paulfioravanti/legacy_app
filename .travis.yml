@@ -1,0 +1,18 @@
+language: ruby
+rvm:
+  - 1.9.3
+env:
+  global:
+    # These variables need to be changed for personalized deployment
+    # See README for details
+    - secure: "XirYFkAL3K6ipKtHW0pDmPW32bkAocDmBSAKSUZLoFMcQTy4FPJumAGgLulP\ndopzNEt5pDdFxmjMZTpLpPnd3CRzFEWMV+VS5s2DETBeY77mPj4AZ2xnaQDd\nekoSNF7D/cYTz9h+D7WWPm4zOhSiZl5U3X2LxDfaV5T8s1liBm4="
+    - secure: "HT0Ej34/wlIHNQVH+wnAhTx7x4LJdu/9y5bsBAP7HJpkEPWZJtVCmRPbaziV\n38rP5BZ0c7a1AIUIrX+5Wc8nFsnEo8+2/ck0m8G6vG83DBjeGUWfzRoXSgRI\npOQxSo3knj0+Xr/gOSBqO+fHx+5zpWz9aICYwfp/Jt/HDu8siBQ="
+    - secure: "JuzfOIo7ST9WK66eY9M6nIvG+2SD9wHgaLCbtXfdHQWVRKaw3sEF4N/9GrLi\n3jriauo2SuNImdQYgdeUcKrQPzT/bTgReEbx9my3xF9hO9q1NxX0CYq+u94B\ngMYGSXgvgBYkR7NQ7d7w6wnPH1DTwJBs97dqj1ojm7BC0tfsJ/c="
+  matrix:
+    - DB: mysql
+before_script:
+  # - psql -c "create database $DB_NAME;" -U $DB_USER
+  - mysql -e 'create database jobsworth_test;' -u $DB_USER
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+script:
+  - bundle exec rake spec cucumber
