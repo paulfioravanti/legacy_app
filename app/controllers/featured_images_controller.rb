@@ -3,7 +3,7 @@ class FeaturedImagesController < ApplicationController
   before_filter :find_image
 
   def new
-    @featured_image = @image.featured_images.build(:feature_at => Time.now)
+    @featured_image = @image.featured_images.build(feature_at: Time.now)
   end
 
   def create

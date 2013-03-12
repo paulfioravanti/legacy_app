@@ -1,9 +1,11 @@
 class ImagesController < ApplicationController
 
-  before_filter :find_image, :except => [:index, :new, :create]
+  before_filter :find_image, except: [:index, :new, :create]
 
   def index
-    @images = Image.parents.paginate(:page => params[:page], :per_page => 10, :order =>:created_at)
+    @images = Image.without_parents.paginate(page: params[:page],
+                                             per_page: 10,
+                                             order: :created_at)
   end
 
   def new
@@ -17,13 +19,11 @@ class ImagesController < ApplicationController
       flash[:success] = "Image created"
       redirect_to images_path
     else
-      flash[:error] = "Unable to save image: #{@image.errors.full_messages.to_sentence}"
+      flash[:error] = "Unable to save image: "\
+                      "#{@image.errors.full_messages.to_sentence}"
       render :new
     end
   end
-
-  # def show
-  # end
 
   def edit
   end
@@ -49,5 +49,4 @@ protected
   def find_image
     @image = Image.find(params[:id])
   end
-
 end
