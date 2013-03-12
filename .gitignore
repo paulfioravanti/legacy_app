@@ -40,3 +40,4 @@ bundler_stubs/
 /config/application.yml
 
 app/assets/images/*
+public/images/*
