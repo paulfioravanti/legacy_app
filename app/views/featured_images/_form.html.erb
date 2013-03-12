@@ -1,9 +1,10 @@
-<%= form_for [@image, @featured_image], :html => {:class => 'featured_image'} do |f| %>
+<%= form_for [@image, @featured_image],
+             html: {class: 'featured_image'} do |f| %>
   <%= image_tag @image.public_filename(:small) %>
 
   <fieldset>
     <%= f.label :feature_at %>
-    <%= f.datetime_select :feature_at, {}, :class => 'datetime' %>
+    <%= f.datetime_select :feature_at, {}, class: 'datetime' %>
   </fieldset>
   <%= f.submit 'Save' %>
 <% end %>
