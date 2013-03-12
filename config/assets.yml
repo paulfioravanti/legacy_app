@@ -1,14 +1,20 @@
 javascript_compressor: yui
 gzip_assets: off
+package_path: jammit
 
 javascripts:
   common:
-    - public/assets/javascripts/application.js
+    # - public/assets/javascripts/application.js
+    - app/assets/javascripts/application.js
 
 stylesheets:
   common:
-    - public/stylesheets/base.css
-    - public/stylesheets/skeleton.css
-    - public/stylesheets/layout.css
-    - public/stylesheets/application.css
+    # - public/stylesheets/base.css
+    # - public/stylesheets/skeleton.css
+    # - public/stylesheets/layout.css
+    # - public/stylesheets/application.css
+    - app/assets/stylesheets/base.css.scss
+    - app/assets/stylesheets/skeleton.css.scss
+    - app/assets/stylesheets/layout.css.scss
+    - app/assets/stylesheets/application.css.scss
 
