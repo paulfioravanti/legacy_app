@@ -28,7 +28,7 @@ Start local Rails server and navigate to `http://localhost:3000`:
 
 ## Testing
 
-Code quality is attempted by using [Code Climate](https://codeclimate.com/) and for quality metrics.
+Code quality is attempted by using [Code Climate](https://codeclimate.com/) for quality metrics, and [Rails Brakeman](http://rails-brakeman.com/) for a security audit.
 
 Run tests:
 
@@ -36,7 +36,7 @@ Run tests:
 
 Check quality metrics:
 
-[![Code Climate](https://codeclimate.com/github/paulfioravanti/legacy_app.png)](https://codeclimate.com/github/paulfioravanti/legacy_app)
+[![Code Climate](https://codeclimate.com/github/paulfioravanti/legacy_app.png)](https://codeclimate.com/github/paulfioravanti/legacy_app) [![Security Status](http://rails-brakeman.com/paulfioravanti/legacy_app.png)](http://rails-brakeman.com/paulfioravanti/legacy_app)
 
 ## Social
 
