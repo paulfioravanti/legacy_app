@@ -28,7 +28,7 @@ Start local Rails server and navigate to `http://localhost:3000`:
 
 ## Testing
 
-Code quality is attempted by using [Code Climate](https://codeclimate.com/) for quality metrics, and [Rails Brakeman](http://rails-brakeman.com/) for a security audit.
+Code quality is attempted by using [Code Climate](https://codeclimate.com/) for quality metrics, and [Rails Brakeman](http://rails-brakeman.com/) for a security audit.  [Reek](https://github.com/troessner/reek) and [Rails Best Practices](https://github.com/railsbp/rails_best_practices) also helped in identifying some quality issues.
 
 Run tests:
 
@@ -37,6 +37,12 @@ Run tests:
 Check quality metrics:
 
 [![Code Climate](https://codeclimate.com/github/paulfioravanti/legacy_app.png)](https://codeclimate.com/github/paulfioravanti/legacy_app) [![Security Status](http://rails-brakeman.com/paulfioravanti/legacy_app.png)](http://rails-brakeman.com/paulfioravanti/legacy_app)
+
+## Issues
+
+- Tests related to Machinist seem quite fragile, and have a tendency to break when changing what I thought was completely unrelated code.
+- Attempting to use any code coverage tools like [SimpleCov](https://github.com/colszowka/simplecov) or [Coveralls](https://coveralls.io/) seems to break tests for some reason, so I'll refrain from using coverage metrics
+- Not 100% sure whether I properly migrated over from Jammit to the Asset Pipeline correctly due to there being a lot of stylesheets that don't seem to be used, or I haven't been able to reference them properly.
 
 ## Social
 
