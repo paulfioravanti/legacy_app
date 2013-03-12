@@ -12,7 +12,7 @@ env:
     - DB: mysql
 before_script:
   # - psql -c "create database $DB_NAME;" -U $DB_USER
-  - mysql -e 'create database jobsworth_test;' -u $DB_USER
+  - mysql -e 'create database $DB_NAME;' -u $DB_USER
   - RAILS_ENV=test bundle exec rake db:migrate --trace
 script:
   - bundle exec rake spec cucumber
