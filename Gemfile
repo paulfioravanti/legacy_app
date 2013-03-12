@@ -15,6 +15,8 @@ gem 'jammit', '0.6.5'
 gem 'barista', git: 'https://github.com/Sutto/barista.git', ref: "eeba1e32d1"
 gem 'pothoven-attachment_fu', '3.2.5'
 
+gem 'haml-rails', '0.4.0'
+
 group :linux do
   # Mac's ship with the jsc command, so don't need this
   # gem 'therubyracer'
