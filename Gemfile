@@ -26,13 +26,13 @@ end
 
 group :development do
   gem 'ruby-debug19', '0.11.6'
-  gem 'test-unit', '2.5.4'
   gem 'brakeman', '1.9.3'
   gem 'rails_best_practices', '1.13.4'
   gem 'annotate', '2.5.0'
 end
 
-group :development, :test, :cucumber do
+group :test, :cucumber do
+  gem 'test-unit', '2.5.4'
   gem 'rspec-rails', '2.13.0', require: false
   gem "machinist", '2.0', require: false
   gem "faker", '1.1.2', require: false

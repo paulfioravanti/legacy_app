@@ -10,6 +10,7 @@ env:
     - secure: "JuzfOIo7ST9WK66eY9M6nIvG+2SD9wHgaLCbtXfdHQWVRKaw3sEF4N/9GrLi\n3jriauo2SuNImdQYgdeUcKrQPzT/bTgReEbx9my3xF9hO9q1NxX0CYq+u94B\ngMYGSXgvgBYkR7NQ7d7w6wnPH1DTwJBs97dqj1ojm7BC0tfsJ/c="
   matrix:
     - DB: mysql
+bundler_args: --without development
 before_script:
   # - psql -c "create database $DB_NAME;" -U $DB_USER
   - mysql -e 'create database $DB_NAME;' -u $DB_USER
