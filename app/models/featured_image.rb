@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: featured_images
+#
+#  id         :integer          not null, primary key
+#  feature_at :datetime         not null
+#  image_id   :integer          not null
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class FeaturedImage < ActiveRecord::Base
 
   attr_accessible :feature_at

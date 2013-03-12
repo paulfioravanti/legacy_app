@@ -1,3 +1,20 @@
+# == Schema Information
+#
+# Table name: images
+#
+#  id           :integer          not null, primary key
+#  size         :integer
+#  content_type :string(255)
+#  filename     :string(255)
+#  height       :integer
+#  width        :integer
+#  parent_id    :integer
+#  thumbnail    :string(255)
+#  created_at   :datetime
+#  updated_at   :datetime
+#  caption      :string(255)
+#
+
 class Image < ActiveRecord::Base
 
   attr_accessible :uploaded_data, :caption
