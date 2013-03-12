@@ -14,15 +14,7 @@ class ImagesController < ApplicationController
 
   def create
     @image = Image.new(params[:image])
-
-    if @image.save
-      flash[:success] = "Image created"
-      redirect_to images_path
-    else
-      flash[:error] = "Unable to save image: "\
-                      "#{@image.errors.full_messages.to_sentence}"
-      render :new
-    end
+    save_image(@image, "Image")
   end
 
   def edit

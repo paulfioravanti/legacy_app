@@ -22,13 +22,21 @@ Clone this repo, install gem dependencies with Bundle, and prepare the databases
 
 ## Usage
 
-Start local Rails server and navigate to `http://localhost:3000`
+Start local Rails server and navigate to `http://localhost:3000`:
 
     $ rails s
 
 ## Testing
 
+Code quality is attempted by using [Code Climate](https://codeclimate.com/) and for quality metrics.
+
+Run tests:
+
     $ rake spec cucumber
+
+Check quality metrics:
+
+[![Code Climate](https://codeclimate.com/github/paulfioravanti/legacy_app.png)](https://codeclimate.com/github/paulfioravanti/legacy_app)
 
 ## Social
 

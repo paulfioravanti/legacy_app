@@ -8,13 +8,7 @@ class FeaturedImagesController < ApplicationController
 
   def create
     @featured_image = @image.featured_images.build(params[:featured_image])
-    if @featured_image.save
-      flash[:success] = "Featured image created"
-      redirect_to images_path
-    else
-      flash[:error] = "Unable to save featured image: #{@featured_image.errors.full_messages.to_sentence}"
-      render :new
-    end
+    save_image(@featured_image, "Featured image")
   end
 
 protected
