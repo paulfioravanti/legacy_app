@@ -3,37 +3,29 @@
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<html>
 <head>
 
-  <!-- Basic Page Needs
+    <!-- Basic Page Needs
   ================================================== -->
   <meta charset="utf-8">
   <title><%= yield(:title) || 'Legacy App' %></title>
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <!-- Mobile Specific Metas
+    <!-- Mobile Specific Metas
   ================================================== -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  <!-- CSS
-  ================================================== -->
-  <%= include_stylesheets :common %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
   <%= yield :stylesheets %>
 
   <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  <script src="http://www.google.com/jsapi"></script>
-  <script type="text/javascript">
-    google.load("jquery", "1.7");
-  </script>
-
-  <%= include_javascripts :common %>
+  <%= javascript_include_tag "application" %>
   <%= yield :javascripts %>
-
-  <%= csrf_meta_tag %>
+  <%= csrf_meta_tags %>
 </head>
 <body>
   <!-- Primary Page Layout
@@ -45,7 +37,7 @@
       </h1>
       <hr />
 
-      <%= render :partial => 'layouts/flash' %>
+      <%= render partial: 'layouts/flash' %>
     </div>
 
     <%= yield %>
