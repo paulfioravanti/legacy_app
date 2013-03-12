@@ -1,32 +1,39 @@
-Legacy App
-==========
+# Legacy App
 
-This is an example rails 2.3 project to use as an exercise in upgrading to
-ruby 1.9 and rails 3. It was derived from an existing project so hopefully
-represents things found in a typical 2.3 app.
+## Description
+
+This is my attempt at upgrading the [Legacy App](https://github.com/tricycle/legacy_app) by [Trike Apps](http://trikeapps.com/), from Rails 2.3 to 3.2.12, still have all tests pass, and maybe shine it up a bit.  Installation and testing instructions for the original Rails 2.3 app can be found [here](https://github.com/tricycle/legacy_app/blob/master/README.md).
+
+## Environment Prerequisites
+
+- [ImageMagick](http://www.imagemagick.org/script/index.php)
+- MySQL (or access to a MySQL server)
+- Ruby 1.9.3
 
 ## Installation
 
-To run the project you will need to have the following installed on your
-development machine:
+Clone this repo, install gem dependencies with Bundle, and prepare the databases:
 
-* [ImageMagick](http://www.imagemagick.org/script/index.php)
-* MySQL (or access to a MySQL server)
-* ruby 1.8.6 or 1.8.7
-    * With the bundler gem installed.
+    $ git clone https://github.com/paulfioravanti/legacy_app.git
+    $ bundle install
+    $ bundle exec rake db:create
+    $ bundle exec rake db:migrate
+    $ bundle exec rake db:test:prepare
 
-Then,
+## Usage
 
-* Clone the repo (including submodules)
-    * `git clone --recursive https://github.com/tricycle/legacy_app.git`
-* cd into repo
-* run `bundle install`
-* `rake db:create db:schema:load`
-* `RAILS_ENV=test rake db:create`
+Start local Rails server and navigate to `http://localhost:3000`
+
+    $ rails s
 
 ## Testing
 
-Run the tests with:
+    $ rake spec cucumber
 
-* `rake spec cucumber`
+## Social
 
+<a href="http://stackoverflow.com/users/567863/paul-fioravanti">
+  <img src="http://stackoverflow.com/users/flair/567863.png" width="208" height="58" alt="profile for Paul Fioravanti at Stack Overflow, Q&amp;A for professional and enthusiast programmers" title="profile for Paul Fioravanti at Stack Overflow, Q&amp;A for professional and enthusiast programmers">
+</a>
+
+[![endorse](http://api.coderwall.com/pfioravanti/endorse.png)](http://coderwall.com/pfioravanti)
