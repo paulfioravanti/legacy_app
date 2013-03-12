@@ -16,6 +16,8 @@ gem 'barista', git: 'https://github.com/Sutto/barista.git', ref: "eeba1e32d1"
 gem 'pothoven-attachment_fu', '3.2.5'
 
 gem 'haml-rails', '0.4.0'
+# App secret key configuration
+gem 'figaro', '0.6.3'
 
 group :linux do
   # Mac's ship with the jsc command, so don't need this
@@ -25,6 +27,9 @@ end
 group :development do
   gem 'ruby-debug19', '0.11.6'
   gem 'test-unit', '2.5.4'
+  gem 'brakeman', '1.9.3'
+  gem 'rails_best_practices', '1.13.4'
+  gem 'annotate', '2.5.0'
 end
 
 group :development, :test, :cucumber do
