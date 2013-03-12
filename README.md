@@ -1,5 +1,7 @@
 # Legacy App
 
+[![Dependency Status](https://gemnasium.com/paulfioravanti/legacy_app.png)](https://gemnasium.com/paulfioravanti/legacy_app) [![Code Climate](https://codeclimate.com/github/paulfioravanti/legacy_app.png)](https://codeclimate.com/github/paulfioravanti/legacy_app) [![Security Status](http://rails-brakeman.com/paulfioravanti/legacy_app.png)](http://rails-brakeman.com/paulfioravanti/legacy_app)
+
 ## Description
 
 This is my attempt at upgrading the [Legacy App](https://github.com/tricycle/legacy_app) by [Trike Apps](http://trikeapps.com/), from Rails 2.3 to 3.2.12, still have all tests pass, and maybe shine it up a bit.  Installation and testing instructions for the original Rails 2.3 app can be found [here](https://github.com/tricycle/legacy_app/blob/master/README.md).
@@ -33,10 +35,6 @@ Code quality is attempted by using [Code Climate](https://codeclimate.com/) for 
 Run tests:
 
     $ rake spec cucumber
-
-Check quality metrics:
-
-[![Code Climate](https://codeclimate.com/github/paulfioravanti/legacy_app.png)](https://codeclimate.com/github/paulfioravanti/legacy_app) [![Security Status](http://rails-brakeman.com/paulfioravanti/legacy_app.png)](http://rails-brakeman.com/paulfioravanti/legacy_app)
 
 ## Issues
 
