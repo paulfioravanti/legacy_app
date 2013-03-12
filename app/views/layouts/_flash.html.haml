@@ -1,0 +1,5 @@
+- [:success, :error].each do |type|
+  - if flash()[type].present?
+    %div{ class: "flash alert alert-#{type}" }
+      %button.close{"data-dismiss" => "alert", type: "button"} ×
+      = h flash()[type]

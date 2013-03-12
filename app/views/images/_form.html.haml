@@ -1,0 +1,5 @@
+= form_for @image, html: { multipart: true } do |f|
+  = f.file_field :uploaded_data
+  = f.label :caption
+  = f.text_field :caption
+  = f.submit 'Save Image'

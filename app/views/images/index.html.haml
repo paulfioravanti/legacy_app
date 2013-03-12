@@ -1,0 +1,12 @@
+.sixteen.columns
+  %h2.remove-bottom Images
+.sixteen.columns
+  = link_to 'Add New Image', new_image_path
+- @images.each do |image|
+  .four.columns
+    = image_tag image.public_filename(:small)
+    .controls
+      = link_to "Edit", edit_image_path(image)
+      = link_to "Feature", new_image_featured_image_path(image)
+      = link_to "Delete", image_path(image), method: :delete,
+                confirm: "Are you sure you want to delete this image?"
