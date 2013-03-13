@@ -33,9 +33,12 @@ end
 
 group :test, :cucumber do
   gem 'test-unit', '2.5.4'
+  gem 'capybara', '2.0.2'
   gem 'rspec-rails', '2.13.0', require: false
   gem "machinist", '2.0', require: false
   gem "faker", '1.1.2', require: false
+  gem 'simplecov', '0.7.1', require: false
+  gem 'coveralls', '0.6.2', require: false
 end
 
 group :cucumber do
