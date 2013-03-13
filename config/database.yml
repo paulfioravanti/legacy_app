@@ -3,7 +3,7 @@ mysql: &mysql
   database: <%= ENV['DB_NAME'] %>
   username: <%= ENV['DB_USER'] %>
   password: <%= ENV['DB_PASSWORD'] %>
-  socket: /tmp/mysql.sock
+  # socket: /tmp/mysql.sock
 
 defaults: &defaults
   encoding: utf8
