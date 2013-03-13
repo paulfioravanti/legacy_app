@@ -15,10 +15,62 @@ This is my attempt at upgrading the [Legacy App](https://github.com/tricycle/leg
 
 ## Installation
 
-Clone this repo, install gem dependencies with Bundle, and prepare the databases:
+Clone this repo, install gem dependencies with Bundle:
 
     $ git clone https://github.com/paulfioravanti/legacy_app.git
     $ bundle install
+
+### Environment Configuration
+
+    $ cp config/application.example.yml config/application.yml
+
+**Inside Rails App**
+
+Generate a secret token:
+
+    $ rake secret
+
+Copy the resulting string into the `SECRET_TOKEN` entry in **config/application.yml**, along with your database information:
+
+    # App keys
+    SECRET_TOKEN: # your rake secret generated token
+
+    development:
+      DB_NAME: # your dev db name here
+      DB_USER: # your dev db username here
+      DB_PASSWORD: # your dev db password here
+
+    test:
+      DB_NAME: # your test db name here
+      DB_USER: # your test db username here
+      DB_PASSWORD: # your test db password here
+
+    production:
+      DB_NAME: # your prod db name here
+      DB_USER: # your prod db username here
+      DB_PASSWORD: # your prod db password here
+
+**Testing with Travis CI** (optional)
+
+If you're using Travis for continuous integration testing, do the following (without the `{{ }}`):
+
+Create encrypted travis variables for your Heroku API key and Repo name:
+
+    $ gem install travis
+    $ travis encrypt DB_NAME={{YOUR_DB_NAME_UNDER_TEST}} # eg: sample_app_test
+    $ travis encrypt DB_USER={{YOUR_DB_USER}}
+    $ travis encrypt DB_PASSWORD={{YOUR_DB_PASSWORD}}
+
+Then add them to **.travis.yml**
+
+    env:
+      global:
+        - secure: {{YOUR_ENCRYPTED_DB_NAME_UNDER_TEST}}
+        - secure: {{YOUR_ENCRYPTED_DB_USER}}
+        - secure: {{YOUR_ENCRYPTED_DB_PASSWORD}}
+
+And after all that's done, set up the databases:
+
     $ bundle exec rake db:create
     $ bundle exec rake db:migrate
     $ bundle exec rake db:test:prepare
