@@ -35,6 +35,7 @@ doc/app
 .project
 .sass-cache/
 bundler_stubs/
+.coveralls.yml
 
 # Ignore application configuration
 /config/application.yml
