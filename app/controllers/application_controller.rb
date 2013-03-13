@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
       flash[:success] = "#{image_type} created"
       redirect_to images_path
     else
-      flash[:error] = "Unable to save featured image: #{image.errors.full_messages.to_sentence}"
+      flash[:error] = "Unable to save #{image_type}: #{image.errors.full_messages.to_sentence}"
       render :new
     end
   end
