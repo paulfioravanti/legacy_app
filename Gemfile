@@ -39,13 +39,13 @@ group :test, :cucumber do
   gem "faker", '1.1.2', require: false
   gem 'simplecov', '0.7.1', require: false
   gem 'coveralls', '0.6.2', require: false
+  gem 'database_cleaner', '0.9.1'
+  gem 'launchy', '2.2.0'
 end
 
 group :cucumber do
-  gem 'launchy', '2.2.0', require: false
   gem 'cucumber-rails', '1.3.0', require: false
   gem 'webrat', '0.7.3', require: false
-  gem 'database_cleaner', '0.9.1', require:  false
 end
 
 # Gems used only for assets and not required
