@@ -1,4 +1,5 @@
 # This file is copied to spec/ when you run 'rails generate rspec:install'
+require 'simplecov'
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
@@ -6,7 +7,7 @@ require 'rspec/autorun'
 
 require 'machinist/active_record'
 require 'faker'
-# require 'features/support/blueprints'
+require "#{Rails.root}/features/support/blueprints"
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
