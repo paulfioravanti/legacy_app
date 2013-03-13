@@ -17,7 +17,7 @@
 
 class Image < ActiveRecord::Base
 
-  attr_accessible :uploaded_data, :caption, :size
+  attr_accessible :uploaded_data, :caption
 
   cattr_accessor :thumbnail_sizes
   @@thumbnail_sizes = {
@@ -35,5 +35,5 @@ class Image < ActiveRecord::Base
                  processor:  'MiniMagick',
                  background: true,
                  thumbnails: Image.thumbnail_sizes
-  validates_as_attachment
+  # validates_as_attachment
 end
