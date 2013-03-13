@@ -19,12 +19,9 @@ class Image < ActiveRecord::Base
 
   attr_accessible :uploaded_data, :caption
 
-  cattr_accessor :thumbnail_sizes
-  @@thumbnail_sizes = {
-    medium: 512,
-    small: 128,
-    tiny: 64
-  }
+  cattr_accessor :thumbnail_sizes do
+    { medium: 512, small: 128, tiny: 64 }
+  end
 
   has_many :featured_images, dependent: :destroy
 
@@ -35,5 +32,6 @@ class Image < ActiveRecord::Base
                  processor:  'MiniMagick',
                  background: true,
                  thumbnails: Image.thumbnail_sizes
-  validates_as_attachment
+  validates_presence_of :content_type, :filename
+  validate              :attachment_attributes_valid?
 end
