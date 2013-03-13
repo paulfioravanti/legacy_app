@@ -1,5 +1,5 @@
 require 'tempfile'
-class Tempfile
+Tempfile.class_eval do
   def size
     if @tmpfile
       @tmpfile.fsync
