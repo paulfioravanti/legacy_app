@@ -40,7 +40,7 @@ Run tests:
 
 ## Extras
 
-- Wrestled with app to gain precious badges up top
+- Wrestled with app to gain precious badges
 - HAMLized the views
 - Refactoring of parts of the app
 - Extra specs to boost code coverage
