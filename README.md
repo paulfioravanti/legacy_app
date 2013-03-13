@@ -54,7 +54,7 @@ Copy the resulting string into the `SECRET_TOKEN` entry in **config/application.
 
 If you're using Travis for continuous integration testing, do the following (without the `{{ }}`):
 
-Create encrypted travis variables for your Heroku API key and Repo name:
+Create encrypted travis variables for your database values:
 
     $ gem install travis
     $ travis encrypt DB_NAME={{YOUR_DB_NAME_UNDER_TEST}} # eg: sample_app_test
