@@ -138,7 +138,6 @@ When /^(?:|I )attach the file "([^"]*)" to "([^"]*)"$/ do |path, field|
     type = "image/gif"
   end
 
-  # attach_file(field, path, type)
   attach_file(field, path)
 end
 
