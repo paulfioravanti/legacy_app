@@ -36,5 +36,4 @@ LegacyApp::Application.configure do
   config.active_support.deprecation = :stderr
 
   config.action_view.cache_template_loading = true
-  Test::Unit.run = true
 end
