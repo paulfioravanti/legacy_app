@@ -39,7 +39,7 @@ Run tests:
 ## Issues
 
 - Tests related to an attachment's size fail the first time, and pass subsequent times.  I haven't been able to find a solution to this issue, and so have taken out `validates_as_attachment` from **app/models/image.rb** and replaced them with the non-`size`-related validations it references.  Given that attachment_fu is not actively maintained, if this app was to move forward, I would suggest switching over to [Paperclip](https://github.com/thoughtbot/paperclip) or [Carrierwave](https://github.com/jnicklas/carrierwave).
-- Attempting to use any code coverage tools like [SimpleCov](https://github.com/colszowka/simplecov) or [Coveralls](https://coveralls.io/) seems to break tests for some reason, so I'll refrain from using coverage metrics
+- Attempting to use any code coverage tools like [SimpleCov](https://github.com/colszowka/simplecov) or [Coveralls](https://coveralls.io/) seems to break tests at random times.  I have managed to get a push to Coveralls working, but the stats are incorrect as they do not include RSpec coverage, which puts it at 100%.  Running the tests on a local environment should bring up the correct numbers.
 - Not 100% sure whether I properly migrated over from Jammit to the Asset Pipeline correctly due to there being a lot of stylesheets that don't seem to be used, or I haven't been able to reference them properly.
 
 ## Social
