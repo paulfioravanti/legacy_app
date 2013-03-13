@@ -35,5 +35,5 @@ class Image < ActiveRecord::Base
                  processor:  'MiniMagick',
                  background: true,
                  thumbnails: Image.thumbnail_sizes
-  # validates_as_attachment
+  validates_as_attachment
 end
