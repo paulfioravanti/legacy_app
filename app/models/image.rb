@@ -17,7 +17,7 @@
 
 class Image < ActiveRecord::Base
 
-  attr_accessible :uploaded_data, :caption
+  attr_accessible :uploaded_data, :caption, :size
 
   cattr_accessor :thumbnail_sizes
   @@thumbnail_sizes = {
