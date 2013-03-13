@@ -33,5 +33,4 @@ class Image < ActiveRecord::Base
                  background: true,
                  thumbnails: Image.thumbnail_sizes
   validates_presence_of :content_type, :filename
-  validate              :attachment_attributes_valid?
 end
