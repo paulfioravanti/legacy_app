@@ -1,5 +1,6 @@
 Given /^there is an image$/ do
   @image = Image.make!
+  sleep(1)
 end
 
 When /^I choose an image to upload$/ do
