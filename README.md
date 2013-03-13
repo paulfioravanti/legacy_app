@@ -1,6 +1,7 @@
 # Legacy App
 
-[![Build Status](https://secure.travis-ci.org/paulfioravanti/legacy_app.png)](http://travis-ci.org/paulfioravanti/legacy_app) [![Dependency Status](https://gemnasium.com/paulfioravanti/legacy_app.png)](https://gemnasium.com/paulfioravanti/legacy_app) [![Code Climate](https://codeclimate.com/github/paulfioravanti/legacy_app.png)](https://codeclimate.com/github/paulfioravanti/legacy_app) [![Security Status](http://rails-brakeman.com/paulfioravanti/legacy_app.png)](http://rails-brakeman.com/paulfioravanti/legacy_app)
+[![Build Status](https://secure.travis-ci.org/paulfioravanti/legacy_app.png)](http://travis-ci.org/paulfioravanti/legacy_app) [![Dependency Status](https://gemnasium.com/paulfioravanti/legacy_app.png)](https://gemnasium.com/paulfioravanti/legacy_app) [![Code Climate](https://codeclimate.com/github/paulfioravanti/legacy_app.png)](https://codeclimate.com/github/paulfioravanti/legacy_app) [![Coverage Status](https://coveralls.io/repos/paulfioravanti/legacy_app/badge.png?branch=master)](https://coveralls.io/r/paulfioravanti/legacy_app)
+ [![Security Status](http://rails-brakeman.com/paulfioravanti/legacy_app.png)](http://rails-brakeman.com/paulfioravanti/legacy_app)
 
 ## Description
 
@@ -30,16 +31,23 @@ Start local Rails server and navigate to `http://localhost:3000`:
 
 ## Testing
 
-Code quality is attempted by using [Code Climate](https://codeclimate.com/) for quality metrics, and [Rails Brakeman](http://rails-brakeman.com/) for a security audit.  [Reek](https://github.com/troessner/reek) and [Rails Best Practices](https://github.com/railsbp/rails_best_practices) also helped in identifying some quality issues.
+Code quality is attempted by using [Code Climate](https://codeclimate.com/) for quality metrics, [SimpleCov](https://github.com/colszowka/simplecov)/[Coveralls](https://coveralls.io/) for test coverage, [Rails Brakeman](http://rails-brakeman.com/) for security auditing, and [Reek](https://github.com/troessner/reek) and [Rails Best Practices](https://github.com/railsbp/rails_best_practices) also helped in identifying some quality issues.
 
 Run tests:
 
+    $ rspec spec
     $ rake spec cucumber
+
+## Extras
+
+- Wrestled with app to gain precious badges up top
+- HAMLized the views
+- Refactoring of parts of the app
+- Extra specs to boost code coverage
 
 ## Issues
 
 - Tests related to an attachment's size fail the first time, and pass subsequent times.  I haven't been able to find a solution to this issue, and so have taken out `validates_as_attachment` from **app/models/image.rb** and replaced them with the non-`size`-related validations it references.  Given that attachment_fu is not actively maintained, if this app was to move forward, I would suggest switching over to [Paperclip](https://github.com/thoughtbot/paperclip) or [Carrierwave](https://github.com/jnicklas/carrierwave).
-- Attempting to use any code coverage tools like [SimpleCov](https://github.com/colszowka/simplecov) or [Coveralls](https://coveralls.io/) seems to break tests at random times.  I have managed to get a push to Coveralls working, but the stats are incorrect as they do not include RSpec coverage, which puts it at 100%.  Running the tests on a local environment should bring up the correct numbers.
 - Not 100% sure whether I properly migrated over from Jammit to the Asset Pipeline correctly due to there being a lot of stylesheets that don't seem to be used, or I haven't been able to reference them properly.
 
 ## Social
