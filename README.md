@@ -100,6 +100,7 @@ Run tests:
 ## Issues
 
 - Tests related to an attachment's size fail the first time, and pass subsequent times.  I haven't been able to find a solution to this issue, and so have taken out `validates_as_attachment` from **app/models/image.rb** and replaced them with the non-`size`-related validations it references.  Given that attachment_fu is not actively maintained, if this app was to move forward, I would suggest switching over to [Paperclip](https://github.com/thoughtbot/paperclip) or [Carrierwave](https://github.com/jnicklas/carrierwave).
+- Travis CI build is quite fragile, and sometimes fails randomly when calling `Image.make!`.
 - Not 100% sure whether I properly migrated over from Jammit to the Asset Pipeline correctly due to there being a lot of stylesheets that don't seem to be used, or I haven't been able to reference them properly.
 
 ## Social
