@@ -1,6 +1,7 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
+ruby '1.9.3'
 
-gem 'rails', '3.2.12'
+gem 'rails', '3.2.13'
 
 gem 'jquery-rails', '2.2.1'
 gem 'mysql2', '0.3.11'
@@ -26,7 +27,7 @@ end
 
 group :development do
   gem 'ruby-debug19', '0.11.6'
-  gem 'brakeman', '1.9.3'
+  gem 'brakeman', '1.9.4'
   gem 'rails_best_practices', '1.13.4'
   gem 'annotate', '2.5.0'
 end
@@ -38,7 +39,7 @@ group :test, :cucumber do
   gem "machinist", '2.0', require: false
   gem "faker", '1.1.2', require: false
   gem 'simplecov', '0.7.1', require: false
-  gem 'coveralls', '0.6.2', require: false
+  gem 'coveralls', '0.6.3', require: false
   gem 'database_cleaner', '0.9.1'
   gem 'launchy', '2.2.0'
   gem 'cucumber-rails', '1.3.1', require: false
