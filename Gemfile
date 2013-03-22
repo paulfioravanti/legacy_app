@@ -12,7 +12,7 @@ gem 'daemons', '1.1.9'
 gem 'delayed_job', '3.0.5'
 gem 'delayed_job_active_record', '0.4.3'
 gem 'execjs', '1.4.0'
-gem 'jammit', '0.6.5'
+gem 'jammit', '0.6.6'
 gem 'barista', git: 'https://github.com/Sutto/barista.git', ref: "eeba1e32d1"
 gem 'pothoven-attachment_fu', '3.2.6'
 
