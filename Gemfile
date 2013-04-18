@@ -10,7 +10,7 @@ gem 'will_paginate', '3.0.4'
 gem 'mini_magick', '3.5.0'
 gem 'daemons', '1.1.9'
 gem 'delayed_job', '3.0.5'
-gem 'delayed_job_active_record', '0.4.3'
+gem 'delayed_job_active_record', '0.4.4'
 gem 'execjs', '1.4.0'
 gem 'jammit', '0.6.6'
 gem 'barista', git: 'https://github.com/Sutto/barista.git', ref: "eeba1e32d1"
@@ -55,5 +55,5 @@ end
 group :assets do
   gem 'sass-rails', '3.2.6'
   gem 'coffee-rails', '3.2.2'
-  gem 'uglifier', '1.3.0'
+  gem 'uglifier', '2.0.1'
 end
