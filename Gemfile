@@ -18,7 +18,7 @@ gem 'pothoven-attachment_fu', '3.2.8'
 
 gem 'haml-rails', '0.4.0'
 # App secret key configuration
-gem 'figaro', '0.6.3'
+gem 'figaro', '0.6.4'
 
 group :linux do
   # Mac's ship with the jsc command, so don't need this
@@ -33,7 +33,7 @@ group :development do
 end
 
 group :test, :cucumber do
-  gem 'test-unit', '2.5.4'
+  gem 'test-unit', '2.5.5'
   gem 'capybara', '2.1.0'
   gem 'rspec-rails', '2.13.1', require: false
   gem "machinist", '2.0', require: false
@@ -55,5 +55,5 @@ end
 group :assets do
   gem 'sass-rails', '3.2.6'
   gem 'coffee-rails', '3.2.2'
-  gem 'uglifier', '2.1.0'
+  gem 'uglifier', '2.1.1'
 end
