@@ -27,7 +27,7 @@ end
 
 group :development do
   gem 'ruby-debug19', '0.11.6'
-  gem 'brakeman', '1.9.5'
+  gem 'brakeman', '2.0.0'
   gem 'rails_best_practices', '1.13.5'
   gem 'annotate', '2.5.0'
 end
