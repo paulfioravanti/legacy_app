@@ -3,7 +3,7 @@ ruby '1.9.3'
 
 gem 'rails', '3.2.13'
 
-gem 'jquery-rails', '2.2.1'
+gem 'jquery-rails', '3.0.1'
 gem 'mysql2', '0.3.11'
 
 gem 'will_paginate', '3.0.4'
@@ -13,7 +13,7 @@ gem 'delayed_job', '3.0.5'
 gem 'delayed_job_active_record', '0.4.4'
 gem 'execjs', '1.4.0'
 gem 'jammit', '0.6.6'
-gem 'barista', git: 'https://github.com/Sutto/barista.git', ref: "eeba1e32d1"
+gem 'barista', '1.3.0'
 gem 'pothoven-attachment_fu', '3.2.8'
 
 gem 'haml-rails', '0.4.0'
@@ -28,7 +28,7 @@ end
 group :development do
   gem 'ruby-debug19', '0.11.6'
   gem 'brakeman', '2.0.0'
-  gem 'rails_best_practices', '1.13.5'
+  gem 'rails_best_practices', '1.13.7'
   gem 'annotate', '2.5.0'
 end
 
