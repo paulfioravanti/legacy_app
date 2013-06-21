@@ -154,7 +154,7 @@ GEM
       activesupport (= 3.2.13)
       bundler (~> 1.0)
       railties (= 3.2.13)
-    rails_best_practices (1.13.7)
+    rails_best_practices (1.13.8)
       activesupport
       awesome_print
       code_analyzer
@@ -267,7 +267,7 @@ DEPENDENCIES
   mysql2 (= 0.3.11)
   pothoven-attachment_fu (= 3.2.8)
   rails (= 3.2.13)
-  rails_best_practices (= 1.13.7)
+  rails_best_practices (= 1.13.8)
   rspec-rails (= 2.13.2)
   ruby-debug19 (= 0.11.6)
   sass-rails (= 3.2.6)
