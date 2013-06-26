@@ -1,6 +1,6 @@
 # Legacy App
 
-[![Build Status](https://secure.travis-ci.org/paulfioravanti/legacy_app.png)](http://travis-ci.org/paulfioravanti/legacy_app) [![Dependency Status](https://gemnasium.com/paulfioravanti/legacy_app.png)](https://gemnasium.com/paulfioravanti/legacy_app) [![Code Climate](https://codeclimate.com/github/paulfioravanti/legacy_app.png)](https://codeclimate.com/github/paulfioravanti/legacy_app) [![Coverage Status](https://coveralls.io/repos/paulfioravanti/legacy_app/badge.png?branch=master)](https://coveralls.io/r/paulfioravanti/legacy_app)
+[![Build Status](https://secure.travis-ci.org/paulfioravanti/legacy_app.png)](http://travis-ci.org/paulfioravanti/legacy_app) [![Code Climate](https://codeclimate.com/github/paulfioravanti/legacy_app.png)](https://codeclimate.com/github/paulfioravanti/legacy_app) [![Coverage Status](https://coveralls.io/repos/paulfioravanti/legacy_app/badge.png?branch=master)](https://coveralls.io/r/paulfioravanti/legacy_app)
  [![Security Status](http://rails-brakeman.com/paulfioravanti/legacy_app.png)](http://rails-brakeman.com/paulfioravanti/legacy_app)
 
 ## Description
