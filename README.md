@@ -110,3 +110,6 @@ Run tests:
 </a>
 
 [![endorse](http://api.coderwall.com/pfioravanti/endorsecount.png)](http://coderwall.com/pfioravanti)
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/paulfioravanti/legacy_app/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
