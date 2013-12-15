@@ -45,7 +45,7 @@ describe "Images on UI" do
 
     context "with invalid information" do
       before do
-        Image.stub!(:find).and_return(image)
+        Image.stub(:find).and_return(image)
         image.should_receive(:update_attributes).
           with("caption" => image.caption).and_return(false)
       end
