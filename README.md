@@ -1,7 +1,6 @@
 # Legacy App
 
 [![Code Climate](https://codeclimate.com/github/paulfioravanti/legacy_app.png)](https://codeclimate.com/github/paulfioravanti/legacy_app) [![Coverage Status](https://coveralls.io/repos/paulfioravanti/legacy_app/badge.png?branch=master)](https://coveralls.io/r/paulfioravanti/legacy_app)
- [![Security Status](http://rails-brakeman.com/paulfioravanti/legacy_app.png)](http://rails-brakeman.com/paulfioravanti/legacy_app)
 
 ## Description
 
