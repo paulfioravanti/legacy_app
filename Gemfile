@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 ruby '1.9.3'
 
-gem 'rails', '3.2.16'
+gem 'rails', '3.2.17'
 
 gem 'jquery-rails', '3.0.1'
 gem 'mysql2', '0.3.14'
@@ -27,7 +27,7 @@ end
 
 group :development do
   gem 'ruby-debug19', '0.11.6'
-  gem 'brakeman', '2.3.1'
+  # gem 'brakeman', '2.3.1' # taken out due to tilt dependencies issue
   gem 'rails_best_practices', '1.14.4'
   gem 'annotate', '2.6.0'
 end
